@@ -4,6 +4,7 @@
 #include "IO/IOsys.hpp"
 #include "IO/state.hpp"
 #include "callForHelpChain/callForHelpChain.hpp"
+#include "cryChain/cryChain.hpp"
 
 
 
@@ -62,15 +63,20 @@ int main(int argc, char** argv)
                 break;
 
                 case 2:
-                typePrint("Placeholder Text. Check in the future for content!");
+                typePrint("You look around.");
+                typePrint("\n........", 40);
+                typePrint("You notice a wall in the distance, and you go over to it.")
                 //handleLookAround();
                 userState.shouldLoopThroughSelection = true;
 
                 break;
                 
                 case 3:
-                typePrint("Placeholder Text. heck in the future for content!");
-                //handleCry();
+                typePrint("You want to just sit down and cry, however");
+                typePrint(".........", 30);
+                changeColor(RED);
+                typePrint("\nYou can't even cry anymore.");
+                handleCry();
                 userState.shouldLoopThroughSelection = true;
 
                 break;
@@ -100,6 +106,5 @@ int main(int argc, char** argv)
 
 
             }
-
         }
     }
